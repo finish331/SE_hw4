@@ -47,13 +47,4 @@ public class mainTest {
         assertEquals("Enter the score = Not an integer!\r\n", result.toString());
     }
 
-    @Test
-    public void trigger_io_exception(){
-        String inputData = "==";
-        System.setIn(new ByteArrayInputStream(inputData.getBytes()));
-        expectedException.expect(IOException.class);
-
-        main.main(new String[0]);
-    }
-
 }
